@@ -94,12 +94,16 @@ vertical-align:middle;
 }
 /* ============================= */
 
+body {
+    background-color: whitesmoke;
+}
 
 .header {
     height: 80px;
     width: 100%;
     margin: 0 auto;
     background-color: dodgerblue;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -112,5 +116,4 @@ h1 {
 
 .main {
     height: calc(100vh - 82px);
-    background-color: whitesmoke;
 }

@@ -2,6 +2,21 @@
 
 @main("TodoApp") {
 
-    <div></div>
+    <div class="register_todo">
+        <p>新しいToDoを作成する</p>
+        <div class="form">
+            <div class="post">
+                <label for="name" class="todo_name">ToDo名</label>
+                <input type="text" name="todo_name">
+            </div>
+            <div class="deadline">
+                <label for="deadline">期限</label>
+                <input type="text" name="deadline">
+            </div>
+        </div>
+        <div class="add_button">
+            <input type="submit" value="ToDoの追加">
+        </div>
+    </div>
 
 }
