@@ -109,3 +109,8 @@ h1 {
     line-height: 80px;
     color: white;
 }
+
+.main {
+    height: calc(100vh - 82px);
+    background-color: whitesmoke;
+}
