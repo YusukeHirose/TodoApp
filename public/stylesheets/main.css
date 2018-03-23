@@ -101,3 +101,11 @@ vertical-align:middle;
     margin: 0 auto;
     background-color: aqua;
 }
+
+h1 {
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 50px;
+    line-height: 80px;
+    color: white;
+}
