@@ -44,7 +44,7 @@ p {
     float: left;    
 }
 
-.add_button input {
+.button {
     height: 68px;
     width: 120px;
     font-size: 20px;
@@ -72,26 +72,13 @@ p {
 }
 
 .edit {
-    margin-top: 50px;
+    margin-top: 30px;
     float: left;
-}
-
-.edit input {
-    height: 68px;
-    width: 120px;
-    font-size: 20px;
-    background-color: aqua;
 }
 
 .state {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-left: 35px;
     float: left;
 }
 
-.state input {
-    height: 68px;
-    width: 120px;
-    font-size: 20px;
-    background-color: aqua;
-    margin-left: 70px;
-}
