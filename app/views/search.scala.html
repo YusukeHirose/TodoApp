@@ -1,0 +1,26 @@
+@(message: String)
+
+@main("ToDoApp") {
+    <div class="search">
+        <input type="text" name="search" class="search_field">
+        <input type="submit" value="検索" class="button search_button">
+    </div>
+
+    <div class="todos">
+        <div class="todo">
+            <div class="contents">
+                <ul>
+                    <li>todoの内容</li>
+                    <li>期限:</li>
+                    <li>作成日:</li>
+                </ul>
+            </div>
+            <div class="edit">
+                <input type="submit" value="Edit" class="button edit">
+            </div>
+            <div class="state">
+                <input type="button" value="未完了" class="button state">
+            </div>
+        </div>
+    </div>
+}

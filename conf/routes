@@ -5,3 +5,6 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 #Edit page
 GET     /edit                       controllers.Application.edit()
+
+#Search page
+GET     /search                     controllers.Application.search()

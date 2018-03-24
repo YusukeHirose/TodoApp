@@ -15,4 +15,8 @@ public class Application extends Controller {
         return ok(edit.render("/edit"));
     }
 
+    public static Result search() {
+        return ok(search.render("/search"));
+    }
+
 }

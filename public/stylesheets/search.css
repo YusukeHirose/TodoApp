@@ -1,0 +1,17 @@
+.search {
+    width: calc(100vw - 300px);
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.search_field {
+    height: 70px;
+    width: calc(100vw - 700px);
+    font-size: 40px;
+}
+
+.search_button {
+    margin-left: 50px;
+    height: 76px;
+}
