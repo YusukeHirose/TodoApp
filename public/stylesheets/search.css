@@ -7,11 +7,11 @@
 
 .search_field {
     height: 70px;
-    width: calc(100vw - 700px);
+    width: calc(100vw - 686px);
     font-size: 40px;
 }
 
 .search_button {
-    margin-left: 50px;
+    margin-left: 64px;
     height: 76px;
 }

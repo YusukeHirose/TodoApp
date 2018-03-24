@@ -2,7 +2,7 @@
     width: calc(100vw - 300px);
     margin: 0 auto;
     height:200px;
-    border: solid 2px black;
+    border: solid 2px dodgerblue;
 }
 
 p {
@@ -56,7 +56,7 @@ p {
     margin: 0 auto;
     height: 180px;
     margin-top: 30px;
-    border: solid 2px black;
+    border: solid 2px dodgerblue;
 }
 
 .contents {
