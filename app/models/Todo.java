@@ -21,6 +21,7 @@ public class Todo extends Model {
   @Constraints.Required
   public Date deadline;
 
+  @Constraints.Required
   public Date createdAt;
 
   public Date updatedAt;
