@@ -50,3 +50,48 @@ p {
     font-size: 20px;
     background-color: aqua;
 }
+
+.todo {
+    width: calc(100vw - 300px);
+    margin: 0 auto;
+    height: 180px;
+    margin-top: 30px;
+    border: solid 2px black;
+}
+
+.contents {
+    width: 595px;
+    padding-top: 40px;
+    padding-left: 45px;
+    float: left;
+}
+
+.contents ul li {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.edit {
+    margin-top: 50px;
+    float: left;
+}
+
+.edit input {
+    height: 68px;
+    width: 120px;
+    font-size: 20px;
+    background-color: aqua;
+}
+
+.state {
+    margin-top: 50px;
+    float: left;
+}
+
+.state input {
+    height: 68px;
+    width: 120px;
+    font-size: 20px;
+    background-color: aqua;
+    margin-left: 70px;
+}
