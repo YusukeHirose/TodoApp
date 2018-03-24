@@ -11,6 +11,10 @@ public class Application extends Controller {
         return ok(index.render("Your new application is ready."));
     }
 
+    public static Result create() {
+        return redirect("/");
+    }
+
     public static Result edit() {
         return ok(edit.render("/edit"));
     }
