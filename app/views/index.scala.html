@@ -1,29 +1,31 @@
-@(message: String)
+@(todos: List[Todo],todoForm: Form[Todo])
+
+@import helper._
 
 @main("TodoApp") {
 
     <div class="register_todo">
         <p>新しいToDoを作成する</p>
+        @form(routes.Application.create()) {
         <div class="form">
-            <div class="post">
-                <label for="name" class="todo_name">ToDo名</label>
-                <input type="text" name="todo_name">
+            <div class="post"> 
+                @inputText(todoForm("title"),'class -> "todo_form",'_label -> "Todo名")
             </div>
             <div class="deadline">
-                <label for="deadline">期限</label>
-                <input type="text" name="deadline">
+                @inputText(todoForm("deadline"), 'class -> "deadline_form", '_label -> "期限")
             </div>
         </div>
-        <div class="add_button">
-            <input type="submit" value="ToDoの追加" class="button">
-        </div>
+        <input type="submit" value="ToDoの追加" class="add button">
+        }
     </div>
 
     <div class="todos">
         <div class="todo">
             <div class="contents">
                 <ul>
-                    <li>todoの内容</li>
+                @for(todo <- todos){
+                    <li>@todo.title</li>
+                }
                     <li>期限:</li>
                     <li>作成日:</li>
                 </ul>
@@ -36,5 +38,7 @@
             </div>
         </div>       
     </div>
+
+   
 
 }

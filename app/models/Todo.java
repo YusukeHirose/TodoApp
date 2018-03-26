@@ -1,11 +1,9 @@
 package models;
 
-import java.util.Date;
-import java.util.List;
-import javax.persistence.*;
-import javax.validation.*;
+import java.util.*;
 import play.db.ebean.*;
-import play.data.validation.*;
+import play.data.validation.Constraints.*;
+import javax.persistence.*;
 
 @Entity
 public class Todo extends Model {
@@ -13,17 +11,17 @@ public class Todo extends Model {
   @Id
   public Long id;
 
-  @Constraints.Required
-  @Constraints.Min(1)
-  @Constraints.Max(31)
   public String title;
 
-  @Constraints.Required
-  public Date deadline;
 
-  @Constraints.Required
-  public Date createdAt;
+  public static Finder<Long, Todo> find = new Finder(Long.class, Todo.class);
 
-  public Date updatedAt;
+  public static List<Todo> all() {
+    return find.all();
+  }
+
+  public static void create(Todo todo) {
+    todo.save();
+  }
 
 }
