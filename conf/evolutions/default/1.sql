@@ -3,10 +3,13 @@
 
 # --- !Ups
 
-create table todo (
+create table todos (
   id                        bigint auto_increment not null,
   title                     varchar(255),
-  constraint pk_todo primary key (id))
+  deadline                  datetime,
+  created_at                datetime not null,
+  updated_at                datetime not null,
+  constraint pk_todos primary key (id))
 ;
 
 
@@ -16,7 +19,7 @@ create table todo (
 
 SET FOREIGN_KEY_CHECKS=0;
 
-drop table todo;
+drop table todos;
 
 SET FOREIGN_KEY_CHECKS=1;
 

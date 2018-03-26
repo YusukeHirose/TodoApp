@@ -9,10 +9,10 @@
         @form(routes.Application.create()) {
         <div class="form">
             <div class="post"> 
-                @inputText(todoForm("title"),'class -> "todo_form",'_label -> "Todo名")
+                @inputText(todoForm("title"),'class -> "todo_form",'_label -> "Todo名",'_showConstraints -> false)
             </div>
             <div class="deadline">
-                @inputText(todoForm("deadline"), 'class -> "deadline_form", '_label -> "期限")
+                @inputText(todoForm("deadline"), 'class -> "deadline_form", '_label -> "期限",'_showConstraints -> false)
             </div>
         </div>
         <input type="submit" value="ToDoの追加" class="add button">

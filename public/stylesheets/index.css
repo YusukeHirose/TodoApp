@@ -48,6 +48,13 @@ p {
     margin-left: 83px;
 }
 
+dl .error {
+    clear: both;
+    margin-left: 128px;
+    padding-top: 10px;
+    color: red;
+}
+
 .deadline_form {
     width: 600px;
 }
