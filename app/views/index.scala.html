@@ -20,25 +20,13 @@
     </div>
 
     <div class="todos">
-        <div class="todo">
-            <div class="contents">
-                <ul>
-                @for(todo <- todos){
-                    <li>@todo.title</li>
-                }
-                    <li>期限:</li>
-                    <li>作成日:</li>
-                </ul>
-            </div>            
-            <div class="edit">
-                <input type="submit" value="Edit" class="button edit">
-            </div>
-            <div class="state">
-                <input type="button" value="未完了" class="button state">
-            </div>
-        </div>       
+        @if(todos.size() != 0){
+             @for(todo <- todos){
+                  @todo_index(todo)
+             }
+        } else {    
+            <h3>ToDoが登録されていません。</h3>
+        }
     </div>
-
-   
 
 }

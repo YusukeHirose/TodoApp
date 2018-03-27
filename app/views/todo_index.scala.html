@@ -1,0 +1,24 @@
+@(todo: Todo)
+
+<div class="todo">
+    <div class="contents">
+        <ul>
+            <li>Todo内容:
+                <p>@todo.title</p>
+            </li>
+            <li>期限:
+                <p class="deadline_time">@todo.deadline.format("yyyy/MM/dd")</p>
+            </li>
+            <li>作成日:
+                <p class="post_time">@todo.created_at.format("yyyy/MM/dd")</p>
+            </li>
+        </ul>
+    </div>
+    <div class="edit">
+        <input type="submit" value="Edit" class="button edit">
+    </div>
+    <div class="state">
+        <input type="button" value="未完了" class="button state" id="state_button">
+    </div>
+</div>
+

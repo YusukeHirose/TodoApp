@@ -91,6 +91,18 @@ dl .error {
     padding-bottom: 20px;
 }
 
+.contents ul li p {
+      display: inline;
+}
+
+.deadline_time {
+    margin-left: 40px;
+}
+
+.post_time {
+    margin-left: 24px;
+}
+
 .edit {
     margin-top: 30px;
     float: left;
@@ -102,3 +114,12 @@ dl .error {
     float: left;
 }
 
+#state_button {
+     background-color:lightcoral;
+}
+
+.todos h3{
+    margin-left: 400px;
+    margin-top: 50px;
+    color: red;
+}
