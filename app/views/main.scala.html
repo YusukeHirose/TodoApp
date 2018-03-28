@@ -1,5 +1,7 @@
 @(title: String)(content: Html)
 
+@import helper._
+
 <!DOCTYPE html>
 
 <html>
@@ -15,6 +17,9 @@
     <body>
         <div class="header">
             <h1>ToDo</h1>
+            @form(routes.Application.search()){
+            <input type="button" value="検索" class="search_button">
+            }
         </div>
         <div class="main">
              @content
