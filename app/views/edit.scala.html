@@ -1,11 +1,11 @@
-@(message: String)
+@(todo: Todo)
 
 @main("ToDoApp"){
     <div class="register_todo">
         <p>新しいToDoを作成する</p>
         <div class="form">
             <div class="post">
-                <label for="name" class="todo_name">ToDo名</label>
+                <label for="name" class="todo_name">@todo.title</label>
                 <input type="text" name="todo_name">
             </div>
             <div class="deadline">

@@ -30,8 +30,9 @@ public class Application extends Controller {
        }
     }
 
-    public static Result edit() {
-        return ok(edit.render("/edit"));
+    public static Result edit(Long id) {
+        models.Todo todo = models.Todo.find(id);
+        return ok(edit.render(todo));
     }
 
     public static Result search() {

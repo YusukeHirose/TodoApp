@@ -38,6 +38,10 @@ public class Todo extends Model {
     return find.all();
   }
 
+  public static Todo find(Long id) {
+    return find.byId(id);
+  }
+
   public static void create(Todo todo) {
     todo.save();
   }

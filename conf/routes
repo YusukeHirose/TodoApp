@@ -1,3 +1,4 @@
+GET     /                           controllers.Application.root()
 # Home page
 GET     /index                           controllers.Application.index()
 # Map static resources from the /public folder to the /assets URL path
@@ -7,9 +8,8 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 POST    /create                     controllers.Application.create()
 
 #Edit page
-GET     /edit                       controllers.Application.edit()
+GET     /edit/:id           controllers.Application.edit(id: Long)
 
 #Search page
 GET     /search                     controllers.Application.search()
 
-GET     /                           controllers.Application.root()

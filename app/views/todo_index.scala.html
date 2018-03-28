@@ -1,5 +1,7 @@
 @(todo: Todo)
 
+@import helper._
+
 <div class="todo">
     <div class="contents">
         <ul>
@@ -15,7 +17,9 @@
         </ul>
     </div>
     <div class="edit">
+        @form(routes.Application.edit(todo.id)) {
         <input type="submit" value="Edit" class="button edit">
+        }
     </div>
     <div class="state">
         <input type="button" value="未完了" class="button state" id="state_button">
