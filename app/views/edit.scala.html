@@ -5,7 +5,7 @@
 @main("ToDoApp"){
     <div class="register_todo">
         <p>Todoの内容を更新する</p>
-        @form(routes.Application.create()) {
+        @form(routes.Application.update()) {
         <div class="form">
             <div class="post">
                 @inputText(todoForm("title"),'class -> "todo_form",'_label -> "Todo名",'_showConstraints -> false, 'placeholder -> todo.title )
