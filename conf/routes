@@ -12,7 +12,7 @@ POST    /create                     controllers.Application.create()
 GET     /edit/:id           controllers.Application.edit(id: Long)
 
 #Update page
-POST    /update             controllers.Application.update()
+POST    /update             controllers.Application.update(id: Long)
 
 #Search page
 GET     /search                     controllers.Application.search()
