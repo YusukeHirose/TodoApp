@@ -46,4 +46,8 @@ public class Todo extends Model {
     todo.save();
   }
 
+  public static void update(Todo todo) {
+    todo.update();
+  }
+
 }
