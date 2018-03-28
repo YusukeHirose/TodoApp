@@ -11,8 +11,14 @@
             <li>期限:
                 <p class="deadline_time">@todo.deadline.format("yyyy/MM/dd")</p>
             </li>
-            <li>作成日:
-                <p class="post_time">@todo.created_at.format("yyyy/MM/dd")</p>
+            <li>
+                @if(todo.updated_at == todo.created_at){
+                    作成日:
+                    <p class="post_time">@todo.created_at.format("yyyy/MM/dd")</p>
+                } else {
+                    更新日:
+                    <p class="post_time">@todo.updated_at.format("yyyy/MM/dd")</p>
+                }
             </li>
         </ul>
     </div>
