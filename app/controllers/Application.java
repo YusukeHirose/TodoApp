@@ -35,6 +35,18 @@ public class Application extends Controller {
         return ok(edit.render(todo,todoForm));
     }
 
+    public static Result update(Long id) {
+        Form<models.Todo> filledForm = todoForm.bindFromRequest();
+        if (filledForm.hasErrors()) {
+            return badRequest(
+                index.render(models.Todo.all(),filledForm)
+            );
+        } else {
+            models.Todo.update(filledForm.get());
+            return redirect(routes.Application.index());
+        }
+    }
+
     public static Result search() {
         return ok(search.render("/search"));
     }
