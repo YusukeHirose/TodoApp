@@ -32,7 +32,7 @@ public class Application extends Controller {
 
     public static Result edit(Long id) {
         models.Todo todo = models.Todo.find(id);
-        return ok(edit.render(todo));
+        return ok(edit.render(todo,todoForm));
     }
 
     public static Result search() {
