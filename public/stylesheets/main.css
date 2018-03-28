@@ -116,15 +116,18 @@ h1 {
     float: left;
 }
 
-.search_button {
+.header_search_button {
     width: 100px;
+    height: 40px;
     font-size: 34px;
-    line-height: 80px;
-    color: white;
-    border: none;
-    background-color: dodgerblue;
+    line-height: 40px;
     margin-right: 160px;
+    margin-top: 20px;
+    color: yellow;
+    border: none;
     float: right;
+    background-color: dodgerblue;
+    border-bottom: 3px solid black;
 }
 
 .main {
