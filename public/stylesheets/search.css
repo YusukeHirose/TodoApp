@@ -5,6 +5,10 @@
     margin-top: 50px;
 }
 
+dd {
+    float: left;
+}
+
 .search_field {
     height: 30px;
     width: 600px;

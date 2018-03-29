@@ -5,10 +5,15 @@ import play.mvc.*;
 import play.data.*;
 import models.*;
 import views.html.*;
+import java.util.List;
 
 public class Application extends Controller {
 
     static Form<models.Todo> todoForm = Form.form(models.Todo.class);
+    //検索用
+    public static class FindForm {
+        public String input;
+    }
 
     public static Result root() {
         return redirect(routes.Application.index());
@@ -48,7 +53,13 @@ public class Application extends Controller {
     }
 
     public static Result search() {
-        return ok(search.render("/search"));
+        Form<FindForm> f = new Form(FindForm.class).bindFromRequest();
+        List<models.Todo> datas = null;
+        if (!f.hasErrors()) {
+            String input = f.get().input;
+			datas = models.Todo.find.where().ilike("title", "%" + input + "%").findList();
+        }
+        return ok(search.render(f,datas));
     }
 
 }

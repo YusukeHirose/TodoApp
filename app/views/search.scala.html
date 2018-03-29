@@ -1,9 +1,17 @@
-@(message: String)
+@(findForm: Form[Application.FindForm], datas: List[Todo])
+
+@import helper._
 
 @main("ToDoApp") {
+    @form(routes.Application.search()) {
     <div class="search">
-        <input type="text" name="search" class="search_field">
+        @inputText(findForm("input"), '_label -> "", 'class -> "search_field", 'placeholder -> "検索")
         <input type="submit" value="検索" class="button search_button">
     </div>
+    }
+
+    @for(data <- datas){
+        @todo_index(data)
+    }
 
 }
