@@ -10,8 +10,15 @@
     </div>
     }
 
-    @for(data <- datas){
-        @todo_index(data)
-    }
-
+   <div class="todos">
+        @if(datas.size() != 0) {
+            <h3>Todoが@(datas.size())件見つかりました。</h3>
+            @for(data <- datas) {
+                 @todo_index(data)
+            } 
+        } else {
+            <h3>対象のTodoはありません。</h3>
+        }
+   </div>
+    
 }
