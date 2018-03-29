@@ -3,7 +3,7 @@ $(document).ready(function(){
         var target = $(this).val();
         if (target === '未完了') {
             $(this).val('完了');
-            $(this).css('background-color','aqua');
+            $(this).css('background-color','deepskyblue');
         } else {
             $(this).val('未完了');
             $(this).css('background-color','lightcoral');

@@ -127,6 +127,10 @@ progress {
     float: left;
 }
 
+#finish_button {
+    background-color: deepskyblue;
+}
+
 #state_button {
      background-color:lightcoral;
 }

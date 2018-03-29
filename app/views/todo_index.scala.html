@@ -31,7 +31,11 @@
         }
     </div>
     <div class="state">
-        <input type="button" value="未完了" class="button state" id="state_button">
+        @if(todo.rate == "100"){
+            <input type="button" value="完了" class="button state" id="finish_button">
+        } else {
+            <input type="button" value="未完了" class="button state" id="state_button">
+        }
     </div>
 </div>
 
