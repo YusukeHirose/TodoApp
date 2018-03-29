@@ -32,6 +32,8 @@ public class Todo extends Model {
   @UpdatedTimestamp
   public Date updated_at;
 
+  public String rate;
+
   public static Finder<Long, Todo> find = new Finder(Long.class, Todo.class);
 
   public static List<Todo> all() {
