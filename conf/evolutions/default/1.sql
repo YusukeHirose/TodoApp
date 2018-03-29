@@ -7,6 +7,7 @@ create table todos (
   id                        bigint auto_increment not null,
   title                     varchar(255),
   deadline                  datetime,
+  rate                      varchar(255),
   created_at                datetime not null,
   updated_at                datetime not null,
   constraint pk_todos primary key (id))
