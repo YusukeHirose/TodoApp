@@ -20,6 +20,10 @@
                     <p class="post_time">@todo.updated_at.format("yyyy/MM/dd")</p>
                 }
             </li>
+            <li class="progress">進捗:
+                <meter></meter>
+                 @todo.rate%
+            </li>
         </ul>
     </div>
     <div class="edit">
