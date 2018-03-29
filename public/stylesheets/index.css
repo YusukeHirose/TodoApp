@@ -60,20 +60,6 @@ dl .error {
     width: 600px;
 }
 
-.rate {
-    margin-left: 45px;
-}
-
-.rate dt label {
-    float: left;
-}
-
-#rate {
-    margin-left: 70px;
-    float: left;
-    width: 40px;
-}
-
 .add {
     margin-left: 70px;
     float: left;    

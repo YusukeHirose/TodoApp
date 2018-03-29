@@ -14,9 +14,6 @@
             <div class="deadline">
                 @inputText(todoForm("deadline"), 'class -> "deadline_form", '_label -> "期限",'_showConstraints -> false, 'placeholder -> "期限を入力してください(例： 2018／3／31)")
             </div>
-            <div class="rate">
-                @select(todoForm("rate"), options = Seq("1"->"1", "2"->"2", "3"->"3", "4"->"4", "5"->"5"), 'class -> "rate", '_label -> "重要度")
-            </div>
         </div>
         <input type="submit" value="ToDoの追加" class="add button">
         }
