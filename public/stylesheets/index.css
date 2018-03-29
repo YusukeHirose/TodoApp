@@ -108,13 +108,12 @@ dl .error {
     position: relative;
 }
 
-meter {
+progress {
     position: absolute;
     top: 0px;
     width: 600px;
     margin-left: 90px;
     float: left;
-    background-color: goldenrod;
 }
 
 .edit {
