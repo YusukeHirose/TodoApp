@@ -104,6 +104,7 @@ body {
     margin: 0 auto;
     background-color: dodgerblue;
     margin-bottom: 20px;
+    position: fixed;
 }
 
 h1 {
@@ -132,4 +133,5 @@ h1 {
 
 .main {
     height: calc(100vh - 82px);
+    padding-top: 100px;
 }
