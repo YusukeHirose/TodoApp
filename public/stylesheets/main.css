@@ -105,6 +105,7 @@ body {
     background-color: dodgerblue;
     margin-bottom: 20px;
     position: fixed;
+    z-index: 999;
 }
 
 h1 {
