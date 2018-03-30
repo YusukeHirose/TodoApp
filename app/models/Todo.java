@@ -37,7 +37,7 @@ public class Todo extends Model {
   public static Finder<Long, Todo> find = new Finder(Long.class, Todo.class);
 
   public static List<Todo> all() {
-    return find.all();
+    return find.where().orderBy("created_at desc").findList();
   }
 
   public static Todo find(Long id) {

@@ -6,6 +6,7 @@ import play.data.*;
 import models.*;
 import views.html.*;
 import java.util.List;
+import java.util.Comparator;
 
 public class Application extends Controller {
 
@@ -57,7 +58,7 @@ public class Application extends Controller {
         List<models.Todo> datas = null;
         if (!f.hasErrors()) {
             String input = f.get().input;
-			datas = models.Todo.find.where().ilike("title", "%" + input + "%").findList();
+			datas = models.Todo.find.where().ilike("title", "%" + input + "%").orderBy("created_at desc").findList();
         }
         return ok(search.render(f,datas));
     }
