@@ -32,7 +32,7 @@
     </div>
     <div class="state">
         @form(routes.Application.update(todo.id)) {
-            @if(todo.rate == "100" || todo.state == 1) {
+            @if(todo.state == 1) {
                 <input type="hidden" name="state" value="0">
                 <input type="hidden" name="title" value="@{todo.title}">
                 <input type="hidden" name="deadline" value="@{todo.deadline.format("yyyy/MM/dd")}">
