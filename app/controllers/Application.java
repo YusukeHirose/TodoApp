@@ -11,6 +11,7 @@ import java.util.Comparator;
 public class Application extends Controller {
 
     static Form<models.Todo> todoForm = Form.form(models.Todo.class);
+    
     //検索用
     public static class FindForm {
         public String input;

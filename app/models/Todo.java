@@ -34,6 +34,12 @@ public class Todo extends Model {
 
   public String rate;
 
+  public Integer state;
+
+  public Todo(){
+    this.state = 0;
+  }
+
   public static Finder<Long, Todo> find = new Finder(Long.class, Todo.class);
 
   public static List<Todo> all() {

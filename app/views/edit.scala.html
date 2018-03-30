@@ -1,4 +1,4 @@
-@(todo: Todo,todoForm: Form[Todo])
+@(todo: Todo, todoForm: Form[Todo])
 
 @import helper._
 
@@ -8,7 +8,7 @@
         @form(routes.Application.update(todo.id)) {
         <div class="form">
             <div class="post">
-                @inputText(todoForm("title"),'class -> "todo_form",'_label -> "Todo名",'_showConstraints -> false, 'placeholder -> todo.title )
+                @inputText(todoForm("title"), 'class -> "todo_form",'_label -> "Todo名",'_showConstraints -> false, 'placeholder -> todo.title)
             </div>
             <div class="deadline">
                 @inputText(todoForm("deadline"), 'class -> "deadline_form", '_label -> "期限",'_showConstraints -> false, 'placeholder -> todo.created_at.format("yyyy/MM/dd"))

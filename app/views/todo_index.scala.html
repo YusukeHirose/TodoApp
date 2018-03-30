@@ -27,14 +27,22 @@
     </div>
     <div class="edit">
         @form(routes.Application.edit(todo.id)) {
-        <input type="submit" value="Edit" class="button edit">
+        <input type="submit" value="Edit" class="button edit" id="edit_button">
         }
     </div>
     <div class="state">
-        @if(todo.rate == "100"){
-            <input type="button" value="完了" class="button state" id="finish_button">
-        } else {
-            <input type="button" value="未完了" class="button state" id="state_button">
+        @form(routes.Application.update(todo.id)) {
+            @if(todo.rate == "100" || todo.state == 1) {
+                <input type="hidden" name="state" value="0">
+                <input type="hidden" name="title" value="@{todo.title}">
+                <input type="hidden" name="deadline" value="@{todo.deadline.format("yyyy/MM/dd")}">
+                <input type="submit" value="完了" class="button state" id="finish_button">
+            } else {
+                <input type="hidden" name="state" value="1">
+                <input type="hidden" name="title" value="@{todo.title}">
+                <input type="hidden" name="deadline" value="@{todo.deadline.format("yyyy/MM/dd")}">
+                <input type="submit" value="未完了" class="button state" id="state_button">
+            }
         }
     </div>
 </div>
