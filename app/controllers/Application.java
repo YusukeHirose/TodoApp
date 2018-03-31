@@ -24,18 +24,22 @@ public class Application extends Controller {
 
     public static Result index() {
         Form<models.Todo> todoForm = new Form(models.Todo.class);
-        return ok(index.render(models.Todo.all(),todoForm));
+        return ok(index.render("", models.Todo.all(),todoForm));
     }
 
     public static Result create() {
        Form<models.Todo> filledForm = todoForm.bindFromRequest();
        if (filledForm.hasErrors()) {
            return badRequest(
-               index.render(models.Todo.all(),filledForm)
+               index.render("", models.Todo.all(),filledForm)
            );
-       } else {
+       }
+
+       try {
            models.Todo.create(filledForm.get());
            return redirect(routes.Application.index());
+       } catch(Exception e) {
+            return badRequest(index.render("既に登録されています。",models.Todo.all(), filledForm));
        }
     }
 
@@ -49,7 +53,7 @@ public class Application extends Controller {
         Form<models.Todo> filledForm = todoForm.bindFromRequest();
         if (filledForm.hasErrors()) {
             return badRequest(
-                index.render(models.Todo.all(),filledForm)
+                index.render("", models.Todo.all(),filledForm)
             );
         } else {
             models.Todo.update(filledForm.get());

@@ -21,6 +21,12 @@ p {
     height: 60px;
 }
 
+.post p {
+    margin-left: 68px;
+    padding-top: 30px;
+    color: red;
+}
+
 .post dt {
     float: left;
 }

@@ -20,6 +20,7 @@ public class Todo extends Model {
 
   @Required(message = "必須項目です。")
   @MaxLength(value = 31, message = "文字数オーバーです。")
+  @Column(unique = true)
   public String title;
 
   @Required(message = "必須項目です。")

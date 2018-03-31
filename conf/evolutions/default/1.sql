@@ -11,6 +11,7 @@ create table todos (
   state                     integer,
   created_at                datetime not null,
   updated_at                datetime not null,
+  constraint uq_todos_title unique (title),
   constraint pk_todos primary key (id))
 ;
 
