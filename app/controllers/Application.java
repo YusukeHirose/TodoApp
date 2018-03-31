@@ -23,6 +23,7 @@ public class Application extends Controller {
     }
 
     public static Result index() {
+        Form<models.Todo> todoForm = new Form(models.Todo.class);
         return ok(index.render(models.Todo.all(),todoForm));
     }
 
@@ -40,6 +41,7 @@ public class Application extends Controller {
 
     public static Result edit(Long id) {
         models.Todo todo = models.Todo.find(id);
+        todoForm = new Form(models.Todo.class).fill(todo);
         return ok(edit.render(todo,todoForm));
     }
 
