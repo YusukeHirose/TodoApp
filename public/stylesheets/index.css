@@ -18,7 +18,7 @@ p {
 
 .post {
     margin-left: 45px;
-    height: 40px;
+    height: 60px;
 }
 
 .post dt {
@@ -66,7 +66,7 @@ dl .error {
 }
 
 .button {
-    height: 60px;
+    height: 70px;
     width: 120px;
     font-size: 20px;
     background-color: aqua;
@@ -117,12 +117,12 @@ progress {
 }
 
 .edit {
-    margin-top: 30px;
+    margin-top: 20px;
     float: left;
 }
 
 .state {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 35px;
     float: left;
 }
