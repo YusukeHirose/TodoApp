@@ -15,7 +15,7 @@ public class Todo extends Model {
 
   static final String TODOS = "todos";
 
-@Id
+  @Id
   public Long id;
 
   @Required(message = "必須項目です。")
