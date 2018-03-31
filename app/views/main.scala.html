@@ -17,7 +17,9 @@
     </head>
     <body>
         <div class="header">
-            <h1>ToDo</h1>
+            @form(routes.Application.index()){
+            <input type="submit" value="ToDo" class="icon">
+            }
             @form(routes.Application.search()){
             <input type="submit" value="検索" class="header_search_button">
             }

@@ -108,14 +108,17 @@ body {
     z-index: 999;
 }
 
-h1 {
-    font-size: 48px;
+.icon {
+    font-size: 56px;
+    font-style: italic;
     font-family: 'Courier New', Courier, monospace;
     margin-left: 50px;
-    line-height: 80px;
+    line-height: 76px;
     width: 150px;
+    background-color: dodgerblue;
     color: white;
     float: left;
+    border: none;
 }
 
 .header_search_button {
