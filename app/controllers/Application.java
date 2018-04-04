@@ -56,8 +56,13 @@ public class Application extends Controller {
                 index.render("", models.Todo.all(),filledForm)
             );
         } else {
-            models.Todo.update(filledForm.get());
-            return redirect(routes.Application.index());
+            models.Todo todo = models.Todo.find(id);
+            if (todo == null) {
+                return ok(index.render("ToDoがありません。",models.Todo.all(),filledForm));
+            } else {
+                models.Todo.update(filledForm.get());
+                return redirect(routes.Application.index());
+            }  
         }
     }
 
