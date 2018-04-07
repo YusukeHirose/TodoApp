@@ -6,7 +6,6 @@ import play.data.*;
 import models.*;
 import views.html.*;
 import java.util.List;
-
 import java.util.Comparator;
 
 public class Application extends Controller {
@@ -60,7 +59,7 @@ public class Application extends Controller {
             if (todo == null) {
                 return ok(index.render("ToDoがありません。",models.Todo.all(),filledForm));
             } else {
-                models.Todo.update(filledForm.get());
+                todo.update(todo, filledForm.get().title, filledForm.get().deadline, filledForm.get().rate);
                 return redirect(routes.Application.index());
             }  
         }

@@ -2,7 +2,11 @@ package models;
 
 import java.util.*;
 import java.util.Date;
+import java.util.function.ToDoubleBiFunction;
+
 import com.avaje.ebean.annotation.*;
+import com.sun.javafx.image.impl.ByteIndexed.Getter;
+
 import play.db.ebean.*;
 import play.data.validation.Constraints.*;
 import javax.persistence.*;
@@ -55,8 +59,10 @@ public class Todo extends Model {
     todo.save();
   }
 
-  public static void update(Todo todo) {
+  public static void update(Todo todo, String title, Date deadline, String rate) {
+    todo.title = title;
+    todo.deadline = deadline;
+    todo.rate = rate;
     todo.update();
   }
-
 }
