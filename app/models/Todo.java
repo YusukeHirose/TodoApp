@@ -63,6 +63,6 @@ public class Todo extends Model {
     todo.title = title;
     todo.deadline = deadline;
     todo.rate = rate;
-    todo.update();
+    todo.save();
   }
 }
