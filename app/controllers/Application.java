@@ -10,7 +10,7 @@ import java.util.Comparator;
 
 public class Application extends Controller {
 
-    static Form<models.Todo> todoForm = Form.form(models.Todo.class);
+   public static Form<models.Todo> todoForm = Form.form(models.Todo.class);
     
     //検索用
     public static class FindForm {
