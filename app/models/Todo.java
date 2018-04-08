@@ -55,6 +55,10 @@ public class Todo extends Model {
     return find.byId(id);
   }
 
+  public static List<Todo> find_order_created_at(String input) {
+    return find.where().eq("state", 0).ilike("title", "%" + input + "%").orderBy("created_at desc").findList();
+  }
+
   public static void create(Todo todo) {
     todo.save();
   }

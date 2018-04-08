@@ -71,7 +71,7 @@ public class Application extends Controller {
         List<models.Todo> search_datas = null;
         if (!f.hasErrors()) {
             String input = f.get().input;
-            datas = models.Todo.find.where().eq("state",0).ilike("title", "%" + input + "%").orderBy("created_at desc").findList();
+            datas = models.Todo.find_order_created_at(input);
         }
         return ok(search.render(f,datas));
     }
