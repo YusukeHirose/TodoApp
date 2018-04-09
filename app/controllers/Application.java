@@ -59,7 +59,7 @@ public class Application extends Controller {
             if (todo == null) {
                 return ok(index.render("ToDoがありません。",models.Todo.all(),filledForm));
             } else {
-                todo.update(todo, filledForm.get().title, filledForm.get().deadline, filledForm.get().rate);
+                todo.update(id, filledForm.get().title, filledForm.get().deadline, filledForm.get().rate, filledForm.get().state);
                 return redirect(routes.Application.index());
             }  
         }

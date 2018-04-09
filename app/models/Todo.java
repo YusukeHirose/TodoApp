@@ -63,10 +63,12 @@ public class Todo extends Model {
     todo.save();
   }
 
-  public static void update(Todo todo, String title, Date deadline, String rate) {
+  public static void update(Long id, String title, Date deadline, String rate, Integer state) {
+    Todo todo = Todo.find(id);
     todo.title = title;
     todo.deadline = deadline;
     todo.rate = rate;
-    todo.save();
+    todo.state = state;
+    todo.update();
   }
 }
